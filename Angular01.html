@@ -72,10 +72,11 @@ Angular実践入門チュートリアル [2] 基礎編
   nodist
 
   ＜コマンド実行結果＞
+<textarea cols="60" rows="5">
 C:\Users\xxxxx>nodist（Node.jsのインストール）
   (x64)
 > 11.13.0  (global: v11.13.0)
-
+</textarea>
 
 ●ダウンロードが可能なNode.jsのバージョンを確認する。
   Node.jsのインストール、ダウンロード可なバージョン一覧を表示する。
@@ -84,6 +85,7 @@ C:\Users\xxxxx>nodist（Node.jsのインストール）
   nodist dist
 
   ＜コマンド実行結果＞
+<textarea cols="60" rows="10">
 C:\Users\xxxxx>nodist dist
   0.1.14
   0.1.15
@@ -95,25 +97,29 @@ C:\Users\xxxxx>nodist dist
   18.0.0
   18.1.0
   18.2.0
+</textarea>
 
 ●この中からバージョン18.2.0をインストールしたい
   ＜コマンド＞
   nodist + 18.2.0
 
   ＜コマンド実行結果＞
+<textarea cols="60" rows="5">
 C:\Users\xxxxx>nodist + 18.2.0
  18.2.0 [===============] 63130/63130 KiB 100% 0.0s
 18.2.0
+</textarea>
 
 ●使用するバージョンを切り替える
   ＜コマンド＞
   nodist global 18.2.0
 
   ＜コマンド実行結果＞
+<textarea cols="60" rows="5">
 C:\Users\xxxxx>nodist global 18.2.0
 18.2.0
 18.2.0 (global)
-
+</textarea>
 
 #---------------------------------------------------------------------------------------------------------------------#
 #             Angular CLIのインストール確認（バージョン確認）
@@ -123,6 +129,7 @@ C:\Users\xxxxx>nodist global 18.2.0
   ng v
 
   ＜コマンド実行結果＞
+<textarea cols="90" rows="20">
 C:\Users\xxxxx>ng v
 
      _                      _                 ____ _     ___
@@ -149,6 +156,7 @@ Package                      Version
 @schematics/angular          9.1.12
 @schematics/update           0.901.12
 rxjs                         6.5.4
+</textarea>
 
 #---------------------------------------------------------------------------------------------------------------------#
 #             AngularのインストールからWEBアプリ作成、コンパイル＋実行＋ブラウザ自動起動
@@ -163,6 +171,7 @@ Angular入門！ 環境構築からプロジェクト実行までの手順をご
   npm install -g @angular/cli
 
   ＜コマンド実行結果＞
+<textarea cols="90" rows="10">
 C:\Users\xxxxx>npm install -g @angular/cli
 C:\Program Files (x86)\Nodist\bin\ng -> C:\Program Files (x86)\Nodist\bin\node_modules\@angular\cli\bin\ng.js
 
@@ -171,21 +180,23 @@ C:\Program Files (x86)\Nodist\bin\ng -> C:\Program Files (x86)\Nodist\bin\node_m
 
 + @angular/cli@13.3.7
 added 59 packages from 29 contributors, removed 168 packages and updated 53 packages in 45.685s
-
+</textarea>
 
 ●作業フォルダにフォーカス
   ＜コマンド＞
   cd C:\Users\xxxxx\node_modules2
 
   ＜コマンド実行結果＞
+<textarea cols="60" rows="3">
 C:\Users\xxxxx>cd C:\Users\xxxxx\node_modules2
-
+</textarea>
 
 ●作業フォルダ内に、WEBアプリ（プロジェクト）を作成する
   ＜コマンド＞
   ng new my-cli
 
   ＜コマンド実行結果＞
+<textarea cols="90" rows="20">
 C:\Users\xxxxx\node_modules2>ng new my-cli
 ? Would you like to add Angular routing? Yes
 ? Which stylesheet format would you like to use? CSS
@@ -220,18 +231,23 @@ CREATE my-cli/src/app/app.component.css (0 bytes)
 √ Packages installed successfully.
     Directory is already under version control. Skipping initialization of git.
 
+</textarea>
+
 ●WEBアプリ実行フォルダにフォーカス（Angular projectが存在するフォルダ）
   ＜コマンド＞
   cd my-cli
 
   ＜コマンド実行結果＞
+<textarea cols="60" rows="3">
 C:\Users\xxxxx\node_modules2>cd my-cli
+</textarea>
 
 ●WEBアプリを実行する際にブラウザも自動起動するコマンド
   ＜コマンド＞
   ng serve --open
 
   ＜コマンド実行結果＞
+<textarea cols="90" rows="10">
 C:\Users\xxxxx\node_modules2\my-cli>ng serve --open
 ? Would you like to share anonymous usage data about this project with the Angular Team at
 Google under Google’s Privacy Policy at https://policies.google.com/privacy? For more
@@ -254,7 +270,7 @@ Build at: 2022-05-26T16:10:56.685Z - Hash: d9137d0991c0485d - Time: 24403ms
 
 √ Compiled successfully.
 
-
+</textarea>
 
 ●WEBアプリの実行を中断（Ctrl＋Cキーをクリックする。）
 バッチ ジョブを終了しますか (Y/N)? Y
@@ -272,7 +288,9 @@ C:\Users\xxxxx\node_modules2\my-cli>
 
 
   ＜構文＞
+<textarea cols="60" rows="3">
   ng generate <schematic> [options]
+</textarea>
 
 #---------------------------------------------------------------------------------------------------------------------#
 #             WEBアプリ（プロジェクト）を作成する
@@ -289,10 +307,11 @@ CLIの概要とコマンドリファレンス
 ＜使用例１＞
 ●Angular CLIでプロジェクトを生成して実行する
   ＜コマンド＞
+<textarea cols="90" rows="3">
   ng new P001-basic      # WEBアプリ（プロジェクト）を生成 .............（1）
   cd P001-basic          # WEBアプリ（プロジェクト）フォルダーに移動 ...（2）
   ng serve --aot --open  # WEBアプリ（プロジェクト）を実行 .............（3）
-
+</textarea>
 
 ＜使用例２＞
 ●開発サーバーで新しい基本的なAngularプロジェクトを作成、構築、および提供する。
@@ -301,9 +320,11 @@ CLIの概要とコマンドリファレンス
 
 ②次のコマンドを使用する。
   ＜コマンド＞
+<textarea cols="90" rows="3">
   ng new my-first-project
   cd my-first-project
   ng serve
+</textarea>
 
 ng new my-first-projectを実行すると、my-first-projectという名前の新しいフォルダーが
 作業中のディレクトリに自動的に作成される。 このフォルダの中でWEBアプリファイルを編集することになる。
