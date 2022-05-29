@@ -1,0 +1,318 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Angular01</title>
+<style>
+.sample_box6 {
+    padding: 1em 1.5em;
+    margin: 2em 0;
+    background-color:lightblue; /*背景色*/#f6faee;
+    border-left: solid 10px darkblue; /*左ライン*/#6b8e23;
+    color:#000000;/*文字色*/
+}
+.sample_box6 p {
+    margin: 0; 
+    padding: 0;
+}
+</style>
+</head>
+<body bgcolor="ivory">
+<p>
+<div class="sample_box6" style="width:80%;height:30px;">
+<span style="font-size:18px;">Angular01（アンギュラー01）チュートリアル</span>
+<span style="font-size:12px;">＜＜WEBアプリ構築＋実行＞＞</span>
+&nbsp;&nbsp;<a href="https://robotwork01.github.io/RobotWork01/RobotWork01.html">戻る</a>
+&nbsp;&nbsp;<a href="">ReadMe</a>
+</div>
+<pre>
+Angularのバージョン
+Angular 2.0 2016年9月14日
+Angular 4.0 2016年12月13日
+Angular 5.0 2017年11月1日
+Angular 6.0 2018年5月4日
+Angular 7.0 2018年10月18日
+Angular 8.0 2019年5月28日
+Angular 9.0 2020年2月6日
+Angular 10.0 2020年6月24日
+Angular 11.0 2020年11月11日
+Angular 12.0 2021年5月13日
+Angular 13.0 2021年11月3日
+
+
+参考記事：
+<a href="https://www.tohoho-web.com/ex/angular.html#tutrial-image">https://www.tohoho-web.com/ex/angular.html#tutrial-image</a>
+とほほのAngular入門
+
+<a href="https://zenn.dev/kyasbal/articles/1ff1da2432a09f5a819a">https://zenn.dev/kyasbal/articles/1ff1da2432a09f5a819a</a>
+Vueを長らく使ってた僕がAngularのチュートリアルをやったら結構便利だと思った件
+
+<a href="https://angular.jp/tutorial">https://angular.jp/tutorial</a>
+ツアー・オブ・ヒーローズ アプリケーションとチュートリアル
+
+<a href="https://stackblitz.com/">https://stackblitz.com/</a>
+StackBlitzは、さまざまな技術を使ってプロジェクトを作成・保存・共有できるブラウザベースの開発環境です。
+
+Create the sample project
+サンプルプロジェクトを作成するには、既製のサンプルプロジェクトをStackBlitzで生成します。 
+作業を保存するにはStackBlitzにログインします。
+生成したプロジェクトをフォークします。
+定期的に保存します。
+
+<a href="https://blog.ttskch.com/angular-todo-2/">https://blog.ttskch.com/angular-todo-2/</a>
+Angular実践入門チュートリアル [2] 基礎編
+
+#---------------------------------------------------------------------------------------------------------------------#
+#             Node.jsのインストール確認（バージョン確認）
+#---------------------------------------------------------------------------------------------------------------------#
+●現在のnodistで使用しているNode.jsのバージョンを確認する。
+  ＜コマンド＞
+  nodist
+
+  ＜コマンド実行結果＞
+C:\Users\xxxxx>nodist（Node.jsのインストール）
+  (x64)
+> 11.13.0  (global: v11.13.0)
+
+
+●ダウンロードが可能なNode.jsのバージョンを確認する。
+  Node.jsのインストール、ダウンロード可なバージョン一覧を表示する。
+
+  ＜コマンド＞
+  nodist dist
+
+  ＜コマンド実行結果＞
+C:\Users\xxxxx>nodist dist
+  0.1.14
+  0.1.15
+  0.1.16
+  ・
+  ・
+  ・
+  17.9.0
+  18.0.0
+  18.1.0
+  18.2.0
+
+●この中からバージョン18.2.0をインストールしたい
+  ＜コマンド＞
+  nodist + 18.2.0
+
+  ＜コマンド実行結果＞
+C:\Users\xxxxx>nodist + 18.2.0
+ 18.2.0 [===============] 63130/63130 KiB 100% 0.0s
+18.2.0
+
+●使用するバージョンを切り替える
+  ＜コマンド＞
+  nodist global 18.2.0
+
+  ＜コマンド実行結果＞
+C:\Users\xxxxx>nodist global 18.2.0
+18.2.0
+18.2.0 (global)
+
+
+#---------------------------------------------------------------------------------------------------------------------#
+#             Angular CLIのインストール確認（バージョン確認）
+#---------------------------------------------------------------------------------------------------------------------#
+●バージョン表示
+  ＜コマンド＞
+  ng v
+
+  ＜コマンド実行結果＞
+C:\Users\xxxxx>ng v
+
+     _                      _                 ____ _     ___
+    / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+   / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+  / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+ /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+                |___/
+
+
+Angular CLI: 9.1.12
+Node: 18.2.0
+OS: win32 x64
+
+Angular:
+...
+Ivy Workspace:
+
+Package                      Version
+------------------------------------------------------
+@angular-devkit/architect    0.901.12
+@angular-devkit/core         9.1.12
+@angular-devkit/schematics   9.1.12
+@schematics/angular          9.1.12
+@schematics/update           0.901.12
+rxjs                         6.5.4
+
+#---------------------------------------------------------------------------------------------------------------------#
+#             AngularのインストールからWEBアプリ作成、コンパイル＋実行＋ブラウザ自動起動
+#---------------------------------------------------------------------------------------------------------------------#
+参考記事：
+<a href="https://amg-solution.jp/blog/27507">https://amg-solution.jp/blog/27507</a>
+Angular入門！ 環境構築からプロジェクト実行までの手順をご紹介します
+株式会社AMG Solution（エーエムジーソリューション）
+
+●Angular CLIのインストール
+  ＜コマンド＞
+  npm install -g @angular/cli
+
+  ＜コマンド実行結果＞
+C:\Users\xxxxx>npm install -g @angular/cli
+C:\Program Files (x86)\Nodist\bin\ng -> C:\Program Files (x86)\Nodist\bin\node_modules\@angular\cli\bin\ng.js
+
+> @angular/cli@13.3.7 postinstall C:\Program Files (x86)\Nodist\bin\node_modules\@angular\cli
+> node ./bin/postinstall/script.js
+
++ @angular/cli@13.3.7
+added 59 packages from 29 contributors, removed 168 packages and updated 53 packages in 45.685s
+
+
+●作業フォルダにフォーカス
+  ＜コマンド＞
+  cd C:\Users\xxxxx\node_modules2
+
+  ＜コマンド実行結果＞
+C:\Users\xxxxx>cd C:\Users\xxxxx\node_modules2
+
+
+●作業フォルダ内に、WEBアプリ（プロジェクト）を作成する
+  ＜コマンド＞
+  ng new my-cli
+
+  ＜コマンド実行結果＞
+C:\Users\xxxxx\node_modules2>ng new my-cli
+? Would you like to add Angular routing? Yes
+? Which stylesheet format would you like to use? CSS
+CREATE my-cli/angular.json (3039 bytes)
+CREATE my-cli/package.json (1069 bytes)
+CREATE my-cli/README.md (1059 bytes)
+CREATE my-cli/tsconfig.json (863 bytes)
+CREATE my-cli/.editorconfig (274 bytes)
+CREATE my-cli/.gitignore (548 bytes)
+CREATE my-cli/.browserslistrc (600 bytes)
+CREATE my-cli/karma.conf.js (1423 bytes)
+CREATE my-cli/tsconfig.app.json (287 bytes)
+CREATE my-cli/tsconfig.spec.json (333 bytes)
+CREATE my-cli/.vscode/extensions.json (130 bytes)
+CREATE my-cli/.vscode/launch.json (474 bytes)
+CREATE my-cli/.vscode/tasks.json (938 bytes)
+CREATE my-cli/src/favicon.ico (948 bytes)
+CREATE my-cli/src/index.html (291 bytes)
+CREATE my-cli/src/main.ts (372 bytes)
+CREATE my-cli/src/polyfills.ts (2338 bytes)
+CREATE my-cli/src/styles.css (80 bytes)
+CREATE my-cli/src/test.ts (745 bytes)
+CREATE my-cli/src/assets/.gitkeep (0 bytes)
+CREATE my-cli/src/environments/environment.prod.ts (51 bytes)
+CREATE my-cli/src/environments/environment.ts (658 bytes)
+CREATE my-cli/src/app/app-routing.module.ts (245 bytes)
+CREATE my-cli/src/app/app.module.ts (393 bytes)
+CREATE my-cli/src/app/app.component.html (23364 bytes)
+CREATE my-cli/src/app/app.component.spec.ts (1073 bytes)
+CREATE my-cli/src/app/app.component.ts (210 bytes)
+CREATE my-cli/src/app/app.component.css (0 bytes)
+√ Packages installed successfully.
+    Directory is already under version control. Skipping initialization of git.
+
+●WEBアプリ実行フォルダにフォーカス（Angular projectが存在するフォルダ）
+  ＜コマンド＞
+  cd my-cli
+
+  ＜コマンド実行結果＞
+C:\Users\xxxxx\node_modules2>cd my-cli
+
+●WEBアプリを実行する際にブラウザも自動起動するコマンド
+  ＜コマンド＞
+  ng serve --open
+
+  ＜コマンド実行結果＞
+C:\Users\xxxxx\node_modules2\my-cli>ng serve --open
+? Would you like to share anonymous usage data about this project with the Angular Team at
+Google under Google’s Privacy Policy at https://policies.google.com/privacy? For more
+details and how to change this setting, see https://angular.io/analytics. No
+√ Browser application bundle generation complete.
+
+Initial Chunk Files   | Names         |  Raw Size
+vendor.js             | vendor        |   1.98 MB |
+polyfills.js          | polyfills     | 294.84 kB |
+styles.css, styles.js | styles        | 173.22 kB |
+main.js               | main          |  50.11 kB |
+runtime.js            | runtime       |   6.51 kB |
+
+                      | Initial Total |   2.49 MB
+
+Build at: 2022-05-26T16:10:56.685Z - Hash: d9137d0991c0485d - Time: 24403ms
+
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+
+
+√ Compiled successfully.
+
+
+
+●WEBアプリの実行を中断（Ctrl＋Cキーをクリックする。）
+バッチ ジョブを終了しますか (Y/N)? Y
+C:\Users\xxxxx\node_modules2\my-cli>
+
+
+#---------------------------------------------------------------------------------------------------------------------#
+#             WEBアプリ内に、コンポーネントを作成する
+#---------------------------------------------------------------------------------------------------------------------#
+●コンポーネントの作成方法
+  ＜コマンド＞
+  ng g component(コンポーネント名)(作成する場所)」、又は、ng gengerate component(コンポーネント名)(作成する場所)」
+  
+  ※コンポーネント名、場所に.html、.css、.ts、.spec、.tsファイルがすぐに作成されます。
+
+
+  ＜構文＞
+  ng generate <schematic> [options]
+
+#---------------------------------------------------------------------------------------------------------------------#
+#             WEBアプリ（プロジェクト）を作成する
+#---------------------------------------------------------------------------------------------------------------------#
+参考記事：
+<a href="https://codezine.jp/article/detail/10795">https://codezine.jp/article/detail/10795</a>
+ Angular開発の強力サポートするコマンドラインツール「Angular CLI」の活用法
+  CodeZine 株式会社 翔泳社
+
+<a href="https://angular.jp/cli">https://angular.jp/cli</a>
+CLIの概要とコマンドリファレンス
+
+
+＜使用例１＞
+●Angular CLIでプロジェクトを生成して実行する
+  ＜コマンド＞
+  ng new P001-basic      # WEBアプリ（プロジェクト）を生成 .............（1）
+  cd P001-basic          # WEBアプリ（プロジェクト）フォルダーに移動 ...（2）
+  ng serve --aot --open  # WEBアプリ（プロジェクト）を実行 .............（3）
+
+
+＜使用例２＞
+●開発サーバーで新しい基本的なAngularプロジェクトを作成、構築、および提供する。
+
+①新しいワークスペースの親ディレクトリに移動する。
+
+②次のコマンドを使用する。
+  ＜コマンド＞
+  ng new my-first-project
+  cd my-first-project
+  ng serve
+
+ng new my-first-projectを実行すると、my-first-projectという名前の新しいフォルダーが
+作業中のディレクトリに自動的に作成される。 このフォルダの中でWEBアプリファイルを編集することになる。
+
+③手動にて、ブラウザで http://localhost:4200/ を開き、新しいアプリケーションが実行されるのを確認します。
+ ng serve コマンドを使用してアプリケーションを構築し、それをローカルに配信すると、
+ ソースファイルのいずれかを変更すると、サーバーによって自動的にアプリケーションが再構築され、
+ ページがリロードされます。
+
+
+</pre>
+</html>
